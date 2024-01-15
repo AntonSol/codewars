@@ -1,18 +1,15 @@
 // https://www.codewars.com/kata/541c8630095125aba6000c00/train/javascript
 function digitalRoot(n) {
-  let res = []
-	let base = 10
-	let currNum = Math.abs(n)
-	do {
-		let baseShiftedNum = Math.floor(currNum / base)
-		let diff = currNum - baseShiftedNum * base
-		res.unshift(diff)
-		currNum = baseShiftedNum
-	} while (currNum > 0)
-	console.log(res)
-if(res.length>1){
-  
-}
+  let numStr=n.toString()
+  let sum=0;
+  for (let digit of numStr){
+	sum+=parseInt(digit)
+  }
+  if (sum>=10){
+	return digitalRoot(sum)
+  }else {
+	return sum
+  }
 
 }
 digitalRoot(942)

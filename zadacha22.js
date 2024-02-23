@@ -1,15 +1,9 @@
-// https://codewars.com/kata/57356c55867b9b7a60000bd7/train/javascript
-function basicOp(operation, value1, value2){
-if (operation==='+'){
-  return value1+value2
+// https://www.codewars.com/kata/55d24f55d7dd296eb9000030/train/javascript
+var summation = function (num) {
+ let x=0 
+ for(let i=0;i<=num;i++){
+  x+=i
+ }
+ return x
 }
-if (operation==='-'){
-  return value1-value2
-}
-if (operation==='*'){
-  return value1*value2
-}if (operation==='/'){
-  return value1/value2
-}
-  return 0;
-}
+summation(8)
